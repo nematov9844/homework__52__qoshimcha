@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
+    <style>
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            padding: 9px 22px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(45deg, rgba(255, 192, 227, 0.377), rgba(0, 255, 255, 0.452));
+            color: #ffffff;
+            font-size: 20px;
+            font-family: sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+        .nr{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            div{
+                h1{
+                    color: #0056b3;
+                    font-size: 40px;
+                    font-family: sans-serif;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex gap-5 justify-center items-center flex-col w-full bg-gray-800 h-screen">
+        <div id="div" class="w-1/2 h-1/2 flex items-center justify-center  ">
+            <img id="img" class="w-full h-full" src="./img/img.jpg" alt="">
+        </div>
+        <label for="input">
+            <input id="input" type="file">
+            Select img
+        </label>
+        <div class="nr">
+            <div class="w-80 flex flex-col gap-5">
+                <h1>brightness</h1>
+                <input id="input1" type="range" min="0" max="500" value="200">
+            </div>
+            <div class="w-80 flex flex-col gap-5">
+                <h1>contrast</h1>
+
+                <input id="input2" type="range" min="0" max="500" value="200">
+            </div>
+            <div class="w-80 flex flex-col gap-5">
+                <h1>saturate</h1>
+                <input id="input3" type="range" min="0" max="200" value="100">
+            </div>
+            <div class="w-80 flex flex-col gap-5">
+                <h1>Border radius</h1>
+
+                <input id="input4" type="range" min="0" max="500" value="200">
+            </div>
+            <div class="w-80 flex flex-col gap-5">
+                <h1>Rotate</h1>
+
+                <input id="input5" type="range" min="0" max="500" value="200">
+            </div>
+            <div class="w-80 flex flex-col gap-5">
+                <h1>Width and hight</h1>
+
+                <input id="input6" type="range" min="0" max="200" value="100">
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
